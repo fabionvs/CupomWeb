@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Projeto TCC
+=======
+# Projeto TCC - Uniceub 01/2022
+>>>>>>> 9357e2194e23054a8ebaa51341a1a954acc6a34c
 
 Projeto criado com React + Typescript [Create React App](https://github.com/facebook/create-react-app).
 
