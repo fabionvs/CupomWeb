@@ -33,6 +33,7 @@ function PrivateRoute({ ...rest }) {
                 // clear messages when empty message received
                 console.info('Fazendo logout')
                 setUser(null);
+                navigate('/login')
             }
         });
         Auth.observable.setUser(Auth.getToken())
