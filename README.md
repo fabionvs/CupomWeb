@@ -1,4 +1,4 @@
-# Projeto Teletrabalho DPU
+# Projeto TCC - Uniceub 01/2022
 
 Projeto criado com React + Typescript [Create React App](https://github.com/facebook/create-react-app).
 
