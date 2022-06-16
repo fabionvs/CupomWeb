@@ -16,6 +16,7 @@ import Register from './views/auth/login/Register';
 import Logout from './views/auth/login/Logout';
 import Cupom from './views/cupom/Index';
 import Promocoes from './views/promocoes/Index';
+import Filial from './views/filial/Index';
 
 function PrivateRoute({ ...rest }) {
     const [user, setUser] = useState(null);
@@ -50,6 +51,7 @@ function PrivateRoute({ ...rest }) {
                             <Route path="/logout" element={<Logout />} />
                             <Route path="cupom/*" element={<Cupom />} />
                             <Route path="promocoes/*" element={<Promocoes />} />
+                            <Route path="filiais/*" element={<Filial />} />
                             <Route path="*" element={<Navigate to="/" />} />
                         </>
                     ) : (

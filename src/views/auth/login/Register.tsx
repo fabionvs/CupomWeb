@@ -46,8 +46,8 @@ function Register() {
         e.preventDefault();
         authService.register({ email: email, password: password, nm_nome: nome, nr_cnpj: cnpj, avatar: avatar }).then(
             (response: any) => {
-                if (response.erro == true) {
-                    setModalErrors(response.erro)
+                if (response.errors) {
+                    setModalErrors(response.errors)
                     setShowModal(true)
                     return false;
                 }

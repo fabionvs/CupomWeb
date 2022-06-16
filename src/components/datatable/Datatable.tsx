@@ -99,7 +99,7 @@ const Datatable = (props: any) => {
         if (campo.split('_')[0] == 'st') {
             (value == 1) ? value = <span className="badge rounded-pill bg-success">Ativo</span> : value = <span className="badge rounded-pill bg-danger">Inativo</span>;
         }
-        if (campo.split('_')[0] == 'dt' || campo.split('_')[1] == 'at') {
+        if ((campo.split('_')[0] == 'dt' || campo.split('_')[1] == 'at') && value != null) {
             value = moment(value).format('DD/MM/YYYY');
         }
         if (props.hide.includes(campo)) { return (<>{last && <MenuColumn />}</>) }
@@ -116,8 +116,8 @@ const Datatable = (props: any) => {
     const Pagination = (p: any) => {
 
         const callNewApi = (event: any, val: any) => {
-            let url = "/" + val.url.split('/').pop();
-            callApi(url);
+            var url = new URL(val.url);
+            callApi(url.pathname.replace('api/','') + url.search);
         }
         return (
             <>

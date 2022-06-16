@@ -49,9 +49,21 @@ function Header() {
                             </Link>
                         </li>
                         <li className="sidebar-item">
-                            <Link className="sidebar-link" to="/filiais">
-                                <span className="align-middle">Filiais</span>
-                            </Link>
+                            <a className="sidebar-link sidebar-link-dopdown" onClick={() => open('filiais')} >
+                                <span className="align-middle"> Filiais</span>
+                            </a>
+                            <ul id="filiais" className="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar" style={{ marginLeft: '0.8rem' }}>
+                                <li className="sidebar-item">
+                                    <Link className="sidebar-link" to="/filiais">
+                                        <span className="align-middle">Minhas Filiais</span>
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link className="sidebar-link" to="/filiais/cadastro">
+                                        <span className="align-middle">Cadastrar Filial</span>
+                                    </Link>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
